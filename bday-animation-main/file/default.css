@@ -44,7 +44,7 @@ a {
   left: 60px;
   top: 550px;
   font-size: 28px;
-  display: none;
+  display: inline-block;
 }
 #clock-box a {
   font-size: 28px;
