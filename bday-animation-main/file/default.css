@@ -139,8 +139,14 @@ a {
 }
 
 .gameapp{
-  background-image: url(../bgforgame.png);
+  background-image: url(../bgggg.png);
   background-size: cover;
   background-repeat: no-repeat; 
   background-position: center;
 }
+
+.flipbook{
+  height: 900px;
+  width: 600px;
+}
+

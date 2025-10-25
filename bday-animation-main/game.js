@@ -31,7 +31,22 @@ function show(screen) {
 // Music controls
 const bgm = q('#bgm'); 
 const muteBtn = q('#muteBtn'); 
-let muted = false;
+let muted = true;
+
+document.addEventListener('play', (event) => {
+    // Get all audio elements on the page
+    const allAudios = document.querySelectorAll('audio');
+
+    // Loop through each audio element
+    allAudios.forEach((audio) => {
+        // If the audio element is not the one that just started playing, pause it
+        if (audio !== event.target) {
+            audio.pause();
+            // Reset the paused audio to the beginning (optional)
+            audio.currentTime = 0; 
+        }
+    });
+}, true); // The `true` here enables event capturing, which is a good practice for this use case
 
 if (muteBtn) {
   muteBtn.addEventListener('click', () => { 
